@@ -42,7 +42,7 @@ header {
     transform: rotate(360deg);
 }
 
-.main-content {
+#main-content {
     width: 100%;
     display: flex;
     flex-direction: row;
