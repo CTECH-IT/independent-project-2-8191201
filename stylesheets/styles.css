@@ -1,1 +1,79 @@
-/* Put your CSS here */
+@font-face {
+    font-family: 'Airstream';
+    src: url('fonts/Airstream-webfont.ttf');
+}
+
+body {
+    text-decoration: none;
+    padding: 20px;
+}
+
+header {
+    border-radius: 20px;
+    background-color: white;
+    padding: 20px;
+}
+
+.title-line {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.title-line h1 {
+    font-family: 'Airstream';
+}
+
+.logo {
+    border: 1px solid;
+    border-radius: 10px;
+    height: 50px;
+    transition: all 1s ease-in-out;
+}
+
+.logo:hover {
+    border: 1px dotted;
+}
+
+.logo.clicked {
+    transform: rotate(360deg);
+}
+
+.main-content {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+
+.content-wrapper {
+    width: 40%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.pictures {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+
+.pictures img {
+    width: 80%;
+    border-radius: 20px;
+}
+
+@media all and (max-aspect-ratio:1/1) {
+    .main-content {
+        flex-direction: column;
+        gap: 20px;
+        align-items: center;
+    }
+
+    .content-wrapper {
+        width: 80%;
+    }
+}
