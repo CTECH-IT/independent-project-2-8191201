@@ -2,7 +2,8 @@ function addLogoButton() {
     "use strict";
     let logo = document.querySelector(".logo");
     logo.addEventListener("click", function() {
-        this.setAttribute("style", "color: red");
+        let thisStyle = this.getAttribute("style");
+        this.setAttribute("style", thisStyle+"color: red;");
         this.classList.add("clicked");
         setTimeout(function(logo) {
             logo.setAttribute("style", "");
