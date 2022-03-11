@@ -6,6 +6,7 @@
 body {
     text-decoration: none;
     padding: 20px;
+    font-family: sans-serif;
 }
 
 header {
@@ -62,14 +63,43 @@ header {
     gap: 20px;
 }
 
-.example-pic {
+.example {
     width: 80%;
+    position: relative;
+}
+
+.example-pic {
+    width: 100%;
     border-radius: 20px;
     transition: all 0.2s ease-in-out;
 }
 
 .example-pic:hover {
     transform: scale(1.1);
+}
+
+.detail-text {
+    background-color: white;
+    border-radius: 10px;
+    border: 1px solid black;
+    padding: 10px;
+
+    position: absolute;
+    width: 80%;
+    height: 80%;
+    overflow: auto;
+    margin: auto;
+    top: 0;
+
+    visibility: hidden;
+    opacity: 0;
+    transition: all 0.2s ease-in-out;
+}
+
+.detail-text.active {
+    visibility: visible;
+    opacity: 1;
+    transform: opacity 0.2s;
 }
 
 @media all and (max-aspect-ratio:1/1) {

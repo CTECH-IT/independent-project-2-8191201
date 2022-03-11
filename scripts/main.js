@@ -1,21 +1,28 @@
 function addLogoButton() {
     "use strict";
     let logo = document.querySelector(".logo");
-    console.log(logo);
     logo.addEventListener("click", function() {
-        console.log("clicked logo");
         this.classList.add("clicked");
-        console.log(this);
         setTimeout(function(logo) {
             logo.classList.remove("clicked");
-            console.log(logo);
         }.bind(null, this), 1000);
+    });
+}
+
+function addDetailText() {
+    let exampleArr = Array.from(document.querySelectorAll(".example"));
+    exampleArr.forEach(function(example) {
+        example.addEventListener("click", function () {
+            let text = this.querySelector('.detail-text');
+            text.classList.toggle("active");
+        });
     });
 }
 
 function initialize() {
     "use strict";
     addLogoButton();
+    addDetailText();
 }
 
 initialize();
