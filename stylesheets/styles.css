@@ -26,6 +26,7 @@ header {
 }
 
 .logo {
+    padding: 5px;
     border: 1px solid;
     border-radius: 10px;
     height: 50px;
@@ -61,9 +62,14 @@ header {
     gap: 20px;
 }
 
-.pictures img {
+.example-pic {
     width: 80%;
     border-radius: 20px;
+    transition: all 0.2s ease-in-out;
+}
+
+.example-pic:hover {
+    transform: scale(1.1);
 }
 
 @media all and (max-aspect-ratio:1/1) {
